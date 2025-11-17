@@ -114,31 +114,13 @@ def pdf_link(pdf_url, link_text="Click here to view PDF"):
 # Assets for about me
 img_maria1 = Image.open("images/maria1.jpg")
 img_maria2 = Image.open("images/maria2.jpg")
-img_ifg = Image.open("images/ifg.jpg")
-#Assets for competitions
-img_lit = Image.open("images/legalease.jpg")
-img_lifehack2 = Image.open("images/lifehack2.jpg")
-img_lifehack = Image.open("images/lifehack.jpg")
-img_he4d = Image.open("images/he4d.jpg")
-img_ecc = Image.open("images/ecc.jpg")
-img_shopee = Image.open("images/shopee.png")
-img_sbcc = Image.open("images/sbcc.png")
-img_runes = Image.open("images/runes.png")
+img_ifg = Image.open("images/ifg.png")
+
 # Assets for education
-img_sji = Image.open("images/sji.jpg")
 img_unil = Image.open("images/unil2.png")
 img_FIU = Image.open("images/FIU.jpg")
 img_uah = Image.open("images/uah.jpeg")
-img_gmss = Image.open("images/gmss.jpg")
-img_sjij = Image.open("images/sjij.jpg")
-img_dsa = Image.open("images/dsa.jpg")
-# Assets for experiences
-img_quest = Image.open("images/questlogo.jpg")
-img_scor = Image.open("images/scor.jpg")
-img_iasg = Image.open("images/iasg.jpg")
-img_sshsph = Image.open("images/sshsph.jpg")
-img_yll = Image.open("images/yll.jpg")
-img_saf = Image.open("images/saf.jpg")
+
 # Assets for experience
 img_trc = Image.open("images/trc.png")
 img_nttdata = Image.open("images/nttdata.jpg")
@@ -153,21 +135,6 @@ img_finger = Image.open("images/finger.png")
 img_sql = Image.open("images/sql.png")
 img_forecast = Image.open("images/forecast.png")
 
-# Assets for blog
-img_qb = Image.open("images/qb.jpg")
-img_mayans = Image.open("images/mayans.jpg")
-img_outlier = Image.open("images/outlier.png")
-img_dac = Image.open("images/dac.png")
-img_raffles = Image.open("images/raffles.jpg")
-img_covid = Image.open("images/covid.jpg")
-img_gender = Image.open("images/gender.jpg")
-img_hci = Image.open("images/hci.jpg")
-img_wordcloud = Image.open("images/wordcloud.jpg")
-img_taste = Image.open("images/taste.jpg")
-img_measles = Image.open("images/measles.jpeg")
-img_bmsaew = Image.open("images/bmsaew.png")
-img_dac1 = Image.open("images/dac1.png")
-img_dac2 = Image.open("images/dac2.png")
 img_diploma2 = Image.open("images/diploma.jpg")
 
 
