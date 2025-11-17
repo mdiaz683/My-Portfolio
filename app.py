@@ -42,7 +42,8 @@ def fix_image_orientation(image_path):
 #test
 
 # Set page title
-st.set_page_config(page_title="Maria Diaz", page_icon = "desktop_computer", layout = "wide", initial_sidebar_state = "auto")
+icon = Image.open("images/img.png")  # reemplaza con la ruta correcta
+st.set_page_config(page_title="Maria Diaz", page_icon = icon, layout = "wide", initial_sidebar_state = "auto")
 
 # Use the following line to include your style.css file
 st.markdown('<style>' + open('style.css').read() + '</style>', unsafe_allow_html=True)
@@ -252,8 +253,8 @@ with st.sidebar:
     
     choose = option_menu(
                         "Maria Diaz",
-                        ["About Me", "Experience", "Technical Skills", "Education", "Projects", "Conferences", "Gallery", "Resume", "Contact"],
-                         icons=['person fill', 'clock history', 'tools', 'book half',  'clipboard', 'trophy fill', 'image', 'paperclip', 'envelope'],
+                        ["About Me", "Experience", "Projects", "Technical Skills", "Education", "Conferences", "Gallery", "Resume", "Contact"],
+                         icons=['person fill', 'clock history', 'clipboard', 'tools', 'book half', 'trophy fill', 'image', 'paperclip', 'envelope'],
                          menu_icon="mortarboard", 
                          default_index=0,
                          styles={
@@ -289,8 +290,8 @@ if choose == "About Me":
             st.subheader("AI Engineer | Data Analyst | Forensic Sciences & Technologies")
             st.write("👋🏻 Hi, I'm Maria!  Originally from Madrid, Spain, now based in Miami, I’ve taken an exciting journey from forensic sciences and cybersecurity into the world of artificial intelligence. Along the way, I discovered my passion for building impactful tech solutions that connect innovation with real-world needs.")
             st.write("💼 I love tackling challenges, exploring how AI can solve emerging societal demands, and ensuring technology is applied ethically and meaningfully. My main interests lie in AI research, the creative side of machine learning, and building deep learning models that bring groundbreaking ideas to life.")
-            st.write("🌍 Beyond tech, I’m always looking for my next adventure—whether it's traveling, discovering new places, or meeting inspiring people who expand my personal and professional horizons.")
-            st.write("👨🏼‍💻 Academic interests: Data Visualization, Market Basket Analysis, Recommendation Systems, Natural Language Processing")
+            st.write("🌍 Beyond tech, I’m always looking for my next adventure, whether it's traveling, discovering new places, or meeting inspiring people who expand my personal and professional horizons.")
+            st.write("👨🏼‍💻 During my early professional career, I have had the opportunity to gain diverse experiences, ranging from publishing a research project to implementing a machine learning model I designed to address a real business need. I have collaborated with a cyberintelligence team focused on detecting leaked credentials on Telegram and worked in digital consulting, exploring cutting-edge approaches to ensure ethical AI solutions.")
             st.write("💭 Ideal Career Prospects: Data Analyst, Data Scientist, AI Engineer, AI Consultant")
 
             mention(label="Resume", icon="📄", url="https://drive.google.com/file/d/1eSHuJj-5ptm19K7bpig3n9aj9qyX2NeF/view?usp=drive_link",)
@@ -313,7 +314,10 @@ elif choose == "Experience":
             st.write("*July 2025 to Present*")
             st.markdown("""
             - Supported AI integration and data-driven process optimization for different business challenges.
-            
+            - Key projects: 
+                - Inventory Forecasting Model for Supply Chain Optimization
+                - Web Application for Financial Reconciliation Automation *(More details about the projects in the projects section)*
+                
             `Python` `Skforecast` `Pandas` `Streamlit` `ChatGPT` `Power Automate` `Power BI` `Excel` 
             """)
 
@@ -325,7 +329,7 @@ elif choose == "Experience":
             st.subheader("Digital Technology Consultant - AI/ML & Security Intern, [NTT DATA](https://www.nttdata.com/global/en/)")
             st.write("*May to July 2025*")
             st.markdown("""
-            - Participated in the development of an enterprise AI governance and operationalization framework, aligning with industry standards such as the NIST AI Risk Management Framework.            - Utilised Librosa, Matplotlib and Scikit-Learn to detect anomalies for predictive maintenance of machines using spectrograms and principal component analysis (PCA)
+            - Participated in the development of an enterprise AI governance and operationalization framework, aligning with industry standards such as the NIST AI Risk Management Framework.
             - Performed a technical and strategic evaluation of Azure’s AI Foundry stack to assess its alignment with the framework and uncover key capabilities and gaps in supporting enterprise AI readiness and compliance.
             
             `Microsoft Azure` `Azure AI Foundry`
@@ -341,10 +345,10 @@ elif choose == "Experience":
             st.markdown("""
             - Worked with cyber intelligence team to implement innovative security measures based on threat hunting and leak detection.
             - Developed an AI-driven tool using ML techniques to assess risk levels for credentials detected in Telegram data leaks, leveraging a custom bot built with the Telegram API to automate data collection, prioritize analysis, and boost evaluation efficiency.
+            - Key project: Credential Risk Assessment Tool *(More details about the project in the projects section)*.
             """)
-
-            if st.button("→ *Credential Risk Assessment Tool*"):
-                st.session_state["option_menu"] = "Projects"
+            mention(label="Github Repo", icon="github",
+                    url="https://github.com/mdiaz683/Credential-Risk-Assessment-Tool", )
 
             st.markdown("""
             `Python` `Pandas` `Telegram API` `Dash` `Plotly` `Streamlit` `Excel` 
@@ -364,18 +368,12 @@ elif choose == "Experience":
 elif choose == "Technical Skills":
     #st.write("---")
     st.header("Technical Skills")
-    txt3("Programming Languages","`R`, `Python`, `SQL`, `Java`, `Stata`, `MATLAB`")
-    txt3("Academic Interests","`Data Visualization`, `Market Basket Analysis`, `Recommendation Systems`, `Natural Language Processing`")
-    txt3("Data Visualization", "`ggplot2`, `matplotlib`, `seaborn`, `Plotly`, `Librosa`, `Folium`, `Gephi`, `GIS`, `Tableau`, `Power BI`, `Google Data Studio`, `Domo`, `Google Analytics`")
-    txt3("Database Systems", "`MySQL`, `PostgreSQL`, `SQLite`, `NoSQL`, `Google BigQuery`, `Cloud Firestore`, `InfluxDB`, `ScyllaDB`")
-    txt3("Cloud Platforms", "`Google Cloud Platform`, `Amazon Web Services`, `Heroku`, `Streamlit Cloud`, `Render`, `Hugging Face`, `Minio`")
-    txt3("Natural Language Processing", "`NLTK`, `Word2Vec`, `TF-IDF`, `TextStat`")
-    txt3("Version Control", "`Git`, `Docker`, `MLFlow`")
-    txt3("Design and Front-end Development", "`Canva`, `Figma`, `HTML`, `CSS`, `Streamlit`, `Wordpress`, `Webflow`")
-    txt3("Data Science Techniques", "`Regression`, `Clustering`, `Association Rules Mining`, `Random Forest`, `Decison Trees`, `Principal Components Analysis`, `Text Classification`, `Sentiment Analysis`, `Matrix Factorisation`, `Collaborative Filtering`")
-    txt3("Machine Learning Frameworks", "`Numpy`, `Pandas`, `Scikit-Learn`, `TensorFlow`, `Keras`, `JAX`")
-    txt3("Task Management Tools", "`Asana`, `Notion`, `ClickUp`, `Slack`, `Jira`, `Confluence`, `Miro`, `Mural`")
-    txt3("Miscellaneous", "`Google Firebase`, `Microsoft Office`, `Retool`, `Google Ads`")
+    txt3("Programming Languages","`Python`, `SQL`,  `R`,  `MATLAB`")
+    txt3("Machine Learning & AI Frameworks", "`NumPy`, `Pandas`, `scikit-learn`, `TensorFlow`, `Keras`, `PyTorch`, `PySpark`")
+    txt3("Data Visualization", "`matplotlib`, `seaborn`, `Plotly`, `Dash`, `Tableau`, `Power BI`")
+    txt3("Cloud & Automation Tools", "`Azure AI Foundry`, `Power Automate`, `Streamlit Cloud`, `Hugging Face`")
+    txt3("Software & Development Tools", "`GitHub`, `VS Code`, `Jupyter Notebook`, `LaTeX`, `ChatGPT`")
+    txt3("Hardware", "`Raspberry Pi`, `Arduino`")
 
 # Create section for Education
 #st.write("---")
@@ -393,34 +391,34 @@ elif choose == "Education":
                 st.image(img_FIU)
             with text_column:
                 st.subheader("Master of Science - Applied Artificial Intelligence & IoT, [Florida International University](https://www.fiu.edu/) (2024-2025)")
-                st.write("Relevant Coursework: Computers and the Humanities, Convex Optimization, Data Science in Practice, Data Structures and Algorithms, Data Visualization, Database Technology and Management, Linear Algebra, Multivariable Calculus, Optimization for Large-Scale Data-Driven Inference, Probability, Programming Tools for Economics, Regression Analysis, Statistical Learning")
-                st.markdown("""
-                - [NUS Product Club](https://linkedin.com/company/nusproductclub) - Co-founder & President (2023-24)
-                - [NUS Statistics and Data Science Society](https://sites.google.com/view/nussds/home) - President (2022), Marketing Director (2021-22)
-                - [Google Developer Student Clubs NUS](https://dsc.comp.nus.edu.sg/) - Deputy Head of Finance (2021-22)
+                st.write("Relevant Coursework:  Machine Learning | Deep Learning | Data Engineering | Generative AI")
+                st.markdown(""" 
+                - GPA: 3.82/4.0
+                - Expertise in deploying AI solutions for training, fine-tuning, and inference in IoT and other applications.
+                - Some of the projects completed during the master's program are detailed in the Projects section.
                 """)
+
         with st.container():
             image_column, text_column = st.columns((1,2.5))
             with image_column:
                 st.image(img_uah)
             with text_column:
                 st.subheader("Bachelor of Science - Forensic Sciences and Technologies, [Universidad de Alcalá de Henares](https://uah.es/es/) (2020-2024)")
-                st.write("Coursework: Foundations of Medicinal Chemistry, Pharmaceutical Biochemistry, Statistics for Life Sciences, Human Anatomy and Physiology, Quantitative Reasoning")
-                st.markdown("""
-                Withdrew from course in 2020, before performing a clean slate transfer to pursue a Bachelor's Degree in Data Science and Analytics
-                - [NUS Students' Science Club](https://www.nussciencelife.com/) - Marketing Executive, Welfare Subcommittee
-                - Pharmaceutical Science (Class of 2023) - Assistant Class Representative
+                st.write("Coursework: Digital Investigation on Mobile Devices and Apps | Cybersecurity | Procedural and Criminal Law")
+                st.markdown(""" 
+                - GPA: 8.2/10.0
+                - Thesis: OSINT Tools for Social Media Investigations under the supervision of [Prof. Manuel Sanchez Rubio](https://scholar.google.com/citations?user=zJGH3PAAAAAJ&hl=en&oi=ao)
                 """)
         with st.container():
             image_column, text_column = st.columns((1,2.5))
             with image_column:
                 st.image(img_unil)
             with text_column:
-                st.subheader("Bachelor of Science - Forensic Sciences and Technologies, [Université de Lausanne](https://www.unil.ch/unil/fr/home.html) (2023 - 2024)")
+                st.subheader("Bachelor of Science - Forensic Sciences and Technologies, Exchange Semester at [Université de Lausanne](https://www.unil.ch/unil/fr/home.html) (2023 - 2024)")
                 st.write("Coursework: H2 Chemistry, H2 Economics, H2 Mathematics, H1 Project Work, H1 Chinese, H1 History")
                 st.markdown(""" 
-                - Track and Field - 100m (2016 A Division Semi-finalist), 200m, 4x100m
-                - TPJC Economics and Financial Literacy Fair 2015 - Games Facilitator
+                - GPA: 3.90/4.0
+                - ERASMUS+ Program (Exchange Scholarship)
                 """)
     elif selected == "Modules":
         st.subheader("Modules")
