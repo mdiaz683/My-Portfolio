@@ -313,11 +313,11 @@ elif choose == "Experience":
             st.subheader("Data Science & AI Engineering Intern, [Cordis Corporation](https://cordis.com/na/home?regionPref=71030)")
             st.write("*July 2025 to Present*")
             st.markdown("""
-            - Supported AI integration and data-driven process optimization for different business challenges.
+            - Designed data and AI solution components aligned with enterprise architecture and governance guidelines to support business-wide digital transformation.
             - Key projects: 
-                - Inventory Forecasting Model for Supply Chain Optimization
+                - Inventory Forecasting Model for Supply Chain Optimization:Architected and implemented a demand-forecasting solution, defining data pipelines, model interfaces, and integration patterns to support supply-chain optimization. 
                 - Web Application for Financial Reconciliation Automation *(More details about the projects in the projects section)*
-                
+            
             `Python` `Skforecast` `Pandas` `Streamlit` `ChatGPT` `Power Automate` `Power BI` `Excel` 
             """)
 
