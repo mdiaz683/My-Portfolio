@@ -253,8 +253,8 @@ with st.sidebar:
     
     choose = option_menu(
                         "Maria Diaz",
-                        ["About Me", "Experience", "Projects", "Technical Skills", "Education", "Conferences", "Gallery", "Resume", "Contact"],
-                         icons=['person fill', 'clock history', 'clipboard', 'tools', 'book half', 'trophy fill', 'image', 'paperclip', 'envelope'],
+                        ["About Me", "Experience", "Projects", "Education", "Conferences", "Technical Skills", "Gallery", "Resume", "Contact"],
+                         icons=['person fill', 'clock history', 'clipboard',  'book half', 'trophy fill', 'tools', 'image', 'paperclip', 'envelope'],
                          menu_icon="mortarboard", 
                          default_index=0,
                          styles={
@@ -315,12 +315,14 @@ elif choose == "Experience":
             st.markdown("""
             - Designed data and AI solution components aligned with enterprise architecture and governance guidelines to support business-wide digital transformation.
             - Key projects: 
-                - Inventory Forecasting Model for Supply Chain Optimization:Architected and implemented a demand-forecasting solution, defining data pipelines, model interfaces, and integration patterns to support supply-chain optimization. 
-                - Web Application for Financial Reconciliation Automation *(More details about the projects in the projects section)*
+                - **Inventory Forecasting Model for Supply Chain Optimization**:Architected and implemented a demand-forecasting solution, defining data pipelines, model interfaces, and integration patterns to support supply-chain optimization. 
+                - **Web Application for Financial Reconciliation Automation**: Built a lightweight web application following reusable and modular design patterns, improving process automation for financial reconciliation and reducing dependency on manual workflows.
+            
+            *(More details about the projects in the projects section)*
             
             `Python` `Skforecast` `Pandas` `Streamlit` `ChatGPT` `Power Automate` `Power BI` `Excel` 
             """)
-
+    st.markdown("<br>", unsafe_allow_html=True)
     with st.container():
         image_column, text_column = st.columns((1,5))
         with image_column:
@@ -334,7 +336,7 @@ elif choose == "Experience":
             
             `Microsoft Azure` `Azure AI Foundry`
             """)
-
+    st.markdown("<br>", unsafe_allow_html=True)
     with st.container():
         image_column, text_column = st.columns((1,5))
         with image_column:
@@ -379,227 +381,77 @@ elif choose == "Technical Skills":
 #st.write("---")
 elif choose == "Education":
     st.header("Education")
-    selected_options = ["Summary", "Modules"
-                        ]
-    selected = st.selectbox("Which section would you like to read?", options = selected_options)
-    st.write("Current selection:", selected)
-    if selected == "Summary":
-        st.subheader("Summary")
-        with st.container():
-            image_column, text_column = st.columns((1,2.5))
-            with image_column:
-                st.image(img_FIU)
-            with text_column:
-                st.subheader("Master of Science - Applied Artificial Intelligence & IoT, [Florida International University](https://www.fiu.edu/) (2024-2025)")
-                st.write("Relevant Coursework:  Machine Learning | Deep Learning | Data Engineering | Generative AI")
-                st.markdown(""" 
-                - GPA: 3.82/4.0
-                - Expertise in deploying AI solutions for training, fine-tuning, and inference in IoT and other applications.
-                - Some of the projects completed during the master's program are detailed in the Projects section.
-                """)
+#    selected_options = ["Summary", "Modules"
+#                        ]
+#    selected = st.selectbox("Which section would you like to read?", options = selected_options)
+#    st.write("Current selection:", selected)
+#    if selected == "Summary":
+#        st.subheader("Summary")
+    with st.container():
+        image_column, text_column = st.columns((1,2.5))
+        with image_column:
+            st.image(img_FIU)
+        with text_column:
+            st.subheader("Master of Science - Applied Artificial Intelligence & IoT, [Florida International University](https://www.fiu.edu/) (2024-2025)")
+            st.write("Coursework: **Machine Learning | Deep Learning | Data Engineering | Generative AI | Python Programming | Embedded AI | Cloud Services | Big Data**")
+            st.markdown(""" 
+            - GPA: 3.82/4.0
+            - Expertise in deploying AI solutions for training, fine-tuning, and inference in IoT and other applications.
+            - Some of the projects completed during the master's program are detailed in the **Projects Section**.
+            """)
+    st.markdown("<br>", unsafe_allow_html=True)
+    with st.container():
+        image_column, text_column = st.columns((1,2.5))
+        with image_column:
+            st.image(img_uah)
+        with text_column:
+            st.subheader("Bachelor of Science - Forensic Sciences and Technologies, [Universidad de Alcalá de Henares](https://www.uah.es/es/) (2020–2024)")
+            st.write("Specialized Coursework: **Digital Investigation on Mobile Devices & Apps | Cybersecurity | Programming & Databases | Computer Architecture & Electronic Systems | Signals and Systems**")
+            st.write("General Coursework: **Forensic Toxicology | Forensic Genetics | Forensic Electronics | Document Examination | Forensic Anthropology**")
+            st.markdown(""" 
+            - GPA: 8.2/10.0
+            - Thesis: OSINT Tools for Social Media Investigations under the supervision of [Prof. Manuel Sanchez Rubio](https://scholar.google.com/citations?user=zJGH3PAAAAAJ&hl=en&oi=ao)
+            """)
+    st.markdown("<br>", unsafe_allow_html=True)
+    with st.container():
+        image_column, text_column = st.columns((1,2.5))
+        with image_column:
+            st.image(img_unil)
+        with text_column:
+            st.subheader("Exchange Semester: Bachelor of Science - Forensic Sciences and Technologies, [Université de Lausanne](https://www.unil.ch/unil/fr/home.html) (2023 - 2024)")
+            st.write("Coursework: **Legal & Forensic Medicine | Criminology | Scientific Evidence** ")
+            st.markdown(""" 
+            - GPA: 3.90/4.0
+            - ERASMUS+ Program (Exchange Scholarship)
+            - All coursework was fully delivered in French.
+            """)
 
-        with st.container():
-            image_column, text_column = st.columns((1,2.5))
-            with image_column:
-                st.image(img_uah)
-            with text_column:
-                st.subheader("Bachelor of Science - Forensic Sciences and Technologies, [Universidad de Alcalá de Henares](https://uah.es/es/) (2020-2024)")
-                st.write("Coursework: Digital Investigation on Mobile Devices and Apps | Cybersecurity | Procedural and Criminal Law")
-                st.markdown(""" 
-                - GPA: 8.2/10.0
-                - Thesis: OSINT Tools for Social Media Investigations under the supervision of [Prof. Manuel Sanchez Rubio](https://scholar.google.com/citations?user=zJGH3PAAAAAJ&hl=en&oi=ao)
-                """)
-        with st.container():
-            image_column, text_column = st.columns((1,2.5))
-            with image_column:
-                st.image(img_unil)
-            with text_column:
-                st.subheader("Bachelor of Science - Forensic Sciences and Technologies, Exchange Semester at [Université de Lausanne](https://www.unil.ch/unil/fr/home.html) (2023 - 2024)")
-                st.write("Coursework: H2 Chemistry, H2 Economics, H2 Mathematics, H1 Project Work, H1 Chinese, H1 History")
-                st.markdown(""" 
-                - GPA: 3.90/4.0
-                - ERASMUS+ Program (Exchange Scholarship)
-                """)
-    elif selected == "Modules":
-        st.subheader("Modules")
-        st.write("*List of modules taken at National University of Singapore*")
-        with st.container():
-            sem1, mid, sem2 = st.columns((1,0.1,1))
-            with sem1:
-                st.write("**Academic Year 2019/20 Semester 1**")
-                st.markdown("""
-                |Code|Module Title                       |Workload|
-                |--------|--------------------------------------|---------|
-                |AY1130| Human Anatomy and Physiology I       |4 MCs|
-                |GER1000| Quantitative Reasoning              |4 MCs|
-                |PR1110A| Foundations for Medicinal Chemistry |4 MCs|
-                |PR1111A|Pharmaceutical Biochemistry          |4 MCs|
-                |ST1232| Statistics for Life Sciences         |4 MCs|
-                """)
-                st.write("")
-                st.markdown("""
-                Total Workload for Semester: **20 Modular Credits (MCs)**
-                """)
-            with mid:
-                st.empty()
-            with sem2:
-                st.write("**Academic Year 2020/21 Semester 1**")
-                st.markdown("""
-                |Code|Module Title                       |Workload|
-                |--------|--------------------------------------|---------|
-                |CS1010S|Programming Methodology|4 MCs|
-                |DSA1101|Introduction to Data Science|4 MCs|
-                |GER1000|Quantitative Reasoning|4 MCs|
-                |MA1102R|Calculus|4 MCs|
-                |SP1541|Exploring Science Communication Through Popular Science|4 MCs|
-                """)
-                st.write("")
-                st.markdown("""
-                Total Workload for Semester: **20 Modular Credits (MCs)**
-                """)
-        with st.container():
-            sem1, mid, sem2 = st.columns((1,0.1,1))
-            with sem1:
-                st.write("**Academic Year 2020/21 Semester 2**")
-                st.markdown("""
-                |Code|Module Title                       |Workload|
-                |--------|--------------------------------------|---------|
-                |CFG1002|Career Catalyst|2 MCs|
-                |EC1301|Principles of Economics|4 MCs|
-                |GEQ1000|Asking Questions|4 MCs|
-                |GES1010|Nation-Building in Singapore|4 MCs|
-                |GET1030|Computers and the Humanities|4 MCs|
-                |MA1101R|Linear Algebra I|4 MCs|
-                |ST2131|Probability|4 MCs|
-                """)
-                st.write("")
-                st.markdown("""
-                Total Workload for Semester: **26 Modular Credits (MCs)**
-                """)
-            with mid:
-                st.empty()
-            with sem2:
-                st.write("**Academic Year 2020/21 Special Term (Part II)**")
-                st.markdown("""
-                |Code|Module Title                       |Workload|
-                |--------|--------------------------------------|---------|
-                |CS2040|Data Structures and Algorithms|4 MCs|
-                """)
-                st.write("")
-                st.markdown("""
-                Total Workload for Semester: **4 Modular Credits (MCs)**
-                """)
-        with st.container():
-            sem1, mid, sem2 = st.columns((1,0.1,1))
-            with sem1:
-                st.write("**Academic Year 2021/22 Semester 1**")
-                st.markdown("""
-                |Code|Module Title                       |Workload|
-                |--------|--------------------------------------|---------|
-                |DSA2102|Essential Data Analytics Tools: Numerical Computation|4 MCs|
-                |EC2101|Microeconomic Analysis I|4 MCs|
-                |EC2102|Macroeconomic Analysis I|4 MCs|
-                |EC2204|Financial Accounting for Economists|4 MCs|
-                |EC3305|Programming Tools for Economics|4 MCs|
-                |GEH1049|Public Health in Action|4 MCs|
-                """)
-                st.write("")
-                st.markdown("""
-                Total Workload for Semester: **24 Modular Credits (MCs)**
-                """)
-            with mid:
-                st.empty()
-            with sem2:
-                st.write("**Academic Year 2021/22 Semester 2**")
-                st.markdown("""
-                |Code|Module Title                       |Workload|
-                |--------|--------------------------------------|---------|
-                |ALS1010|Learning to Learn Better|2 MCs|
-                |DSA2101|Essential Data Analytics Tools: Data Visualization|4 MCs|
-                |GES1037|A History of Singapore in Ten Objects|4 MCs|
-                |IS1103|Ethics in Computing|4 MCs|
-                |IT2002|Database Technology and Management|4 MCs|
-                |MA2104|Multivariable Calculus|4 MCs|
-                |ST2132|Mathematical Statistics|4 MCs|
-                """)
-                st.write("")
-                st.markdown("""
-                Total Workload for Semester: **26 Modular Credits (MCs)**
-                """)
-        with st.container():
-            sem1, mid, sem2 = st.columns((1,0.1,1))
-            with sem1:
-                st.write("**Academic Year 2022/23 Semester 1**")
-                st.markdown("""
-                |Code|Module Title                       |Workload|
-                |--------|--------------------------------------|---------|
-                |CFG1003|Financial Wellbeing - Introduction|0 MCs|
-                |CS3244|Machine Learning|4 MCs|
-                |DSA3101|Data Science in Practice|4 MCs|
-                |DSA3102|Essential Data Analytics Tools: Convex Optimization|4 MCs|
-                |ST3131|Regression Analysis|4 MCs|
-                |ST3248|Statistical Learning I|4 MCs|
-                """)
-                st.write("")
-                st.markdown("""
-                Total Workload for Semester: **20 Modular Credits (MCs)**
-                """)
-            with mid:
-                st.empty()
-            with sem2:
-                st.write("**Academic Year 2022/23 Semester 2**")
-                st.markdown("""
-                |Code|Module Title                       |Workload|
-                |--------|--------------------------------------|---------|
-                |DSA4212|Optimization for Large-Scale Data-Driven Inference|4 MCs|
-                |LSM1301|General Biology|4 MCs|
-                |ST4248|Statistical Learning II|4 MCs|
-                """)
-                st.write("")
-                st.markdown("""
-                Total Workload for Semester: **12 Modular Credits (MCs)**
-                """)
-        with st.container():
-            sem1, mid, sem2 = st.columns((1,0.1,1))
-            with sem1:
-                st.write("**Academic Year 2023/24 Semester 1**")
-                st.markdown("""
-                |Code|Module Title                       |Workload|
-                |--------|--------------------------------------|---------|
-                |CS4225|Big Data Systems for Data Science|4 MCs|
-                |DSA4199|Applied Project in Data Science and Analytics|8 MCs|
-                """)
-                st.write("")
-                st.markdown("""
-                Total Workload for Semester: **12 Modular Credits (MCs)**
-                """)
-            with mid:
-                st.empty()
-            with sem2:
-                st.write("**Academic Year 2022/23 Semester 2 (Expected)**")
-                st.markdown("""
-                |Code|Module Title                       |Workload|
-                |--------|--------------------------------------|---------|
-                |DSA426X|Sense-Making Case Analysis|4 MCs|
-                |ST4234|Bayesian Statistics|4 MCs|
-                |DSA4199|Applied Project in Data Science and Analytics|8 MCs|
-                """)
-                st.write("")
-                st.markdown("""
-                Total Workload for Semester: *16 Modular Credits (MCs)**
-                """)
-        with st.container():
-            left, mid, right = st.columns((0.1,1,0.1))
-            with left:
-                st.empty()
-            with mid:
-                st.write("**Graduation Requirements**")
-                st.image(img_dsa)
-            with right:
-                st.empty()
-    #elif selected == "Module Reviews":
-        #st.subheader("Module Reviews")
-        #st.write("*Reviews for selected modules taken in university*")
+#    elif selected == "Modules":
+#       st.subheader("Modules")
+#        st.write("*List of modules taken at National University of Singapore*")
+#        with st.container():
+#            sem1, mid, sem2 = st.columns((1,0.1,1))
+#            with sem1:
+#                st.write("**Academic Year 2019/20 Semester 1**")
+#                st.markdown("""
+#                |Code|Module Title                       |Workload|
+#                |--------|--------------------------------------|---------|
+#                |AY1130| Human Anatomy and Physiology I       |4 MCs|
+#                |GER1000| Quantitative Reasoning              |4 MCs|
+#                |PR1110A| Foundations for Medicinal Chemistry |4 MCs|
+#                |PR1111A|Pharmaceutical Biochemistry          |4 MCs|
+#                |ST1232| Statistics for Life Sciences         |4 MCs|
+#                """)
+#                st.write("")
+#                st.markdown("""
+#                Total Workload for Semester: **20 Modular Credits (MCs)**
+#                """)
+#            with mid:
+#                st.empty()
+#            with sem2:
+#                st.write("**Academic Year 2020/21 Semester 1**")
+#                st.markdown("""
+#                |Code|Module Title                       |Workload|
 
 
 elif choose == "Projects":
