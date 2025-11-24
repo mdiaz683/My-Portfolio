@@ -640,6 +640,8 @@ elif choose == "Gallery":
 elif choose == "Resume":
     st.header("Resume")
     st.write("*In case your current browser cannot display the PDF document, you can open it in a new tab or download it below.*")
+    mention(label="Resume", icon="📄",
+            url="https://drive.google.com/file/d/1eSHuJj-5ptm19K7bpig3n9aj9qyX2NeF/view?usp=drive_link", )
 
     # Ruta local del PDF (ajústala según tu estructura de proyecto)
     pdf_path = "docs/MariaDiaz_Resume.pdf"
